@@ -16,7 +16,7 @@ import VueComponent from "../components/VueComponent.js";
           "react": "https://esm.sh/react",
           "react-dom": "https://esm.sh/react-dom",
           "solid-js": "https://esm.sh/solid-js",
-          "vue": "https://esm.sh/vue@3.4.34",
+          "vue": "https://esm.sh/vue@3.4.34"
         }
       }
     </script>
@@ -27,7 +27,7 @@ import VueComponent from "../components/VueComponent.js";
       <ReactComponent client:only="react" />
       <SolidComponent client:only="solid" />
       <div id="app"></div>
-      <!-- <VueComponent client:only="vue" /> -->
+      <VueComponent client:only="vue" />
     </main>
   </body>
 </html>
