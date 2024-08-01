@@ -20,6 +20,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+  css: {
+    postcss: './postcss.config.js',  // Add this line to include the postcss configuration
+  },
   build: {
     target: "esnext",
     rollupOptions: {
@@ -29,6 +32,7 @@ export default defineConfig({
       output: {
         entryFileNames: "bundle.js",
         format: "esm",
+        assetFileNames: 'assets/[name].[ext]',
       },
     },
   },

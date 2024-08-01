@@ -1,7 +1,7 @@
 ---
 import ReactComponent from "../components/ReactComponent.jsx";
 import SolidComponent from "../components/SolidComponent.jsx";
-import VueComponent from "../components/VueComponent.js";
+import VueComponent from "../components/Working.astro";
 ---
 
 <!doctype html>
@@ -10,6 +10,7 @@ import VueComponent from "../components/VueComponent.js";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{"Astro example"}</title>
+    <link rel="stylesheet" href="http://localhost:7400/assets/App.css" />
     <script type="importmap">
       {
         "imports": {
@@ -21,13 +22,13 @@ import VueComponent from "../components/VueComponent.js";
       }
     </script>
   </head>
+
   <body>
     <main>
-      <h1>Welcome to Astro</h1>
+      <h1>Welcome to <span class="text-purple-700 font-bold">Astro</span></h1>
       <ReactComponent client:only="react" />
       <SolidComponent client:only="solid" />
-      <div id="app"></div>
-      <VueComponent client:only="vue" />
+      <VueComponent />
     </main>
   </body>
 </html>

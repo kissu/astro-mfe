@@ -1,0 +1,15 @@
+<script type="module">
+  // import { createPinia } from "pinia";
+  import { createApp } from "vue";
+
+  // import router from "./router/index.js";
+
+  const { default: VueComponent } = await import(
+    "http://localhost:7400/bundle.js"
+  );
+
+  const app = createApp(VueComponent);
+  app.mount("#app");
+</script>
+
+<div id="app"></div>
